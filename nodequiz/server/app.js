@@ -24,20 +24,18 @@ const serverPort = 3000;
 
 /*************************** API routes go below this line *********************************/
 
-/**
- * API to validate employee in NodeQuiz
- */
 app.get('/api/employees/:id', function(req, res, next) {
-    Employee.findOne({'employeeId': req.params.id}, function(err, employee) {
-      if (err) {
-        console.log(err);
-        return next(err);
-      }  else {
-        console.log(employee);
-        res.json(employee);
-      }
-    })
-  });
+  Employee.findOne({'employeeId': req.params.id}, function(err, employee) {
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+      console.log(employee);
+      res.json(employee);
+    }
+  })
+});
+
 
 /**
  * Creates an express server and listens on port 3000
