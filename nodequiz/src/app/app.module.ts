@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule} from '@angular/router';
 import { AppRoutes } from './app.routing';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { BaseLayoutComponent } from './shared';
@@ -20,8 +20,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { AuthGuard } from './shared/guards/auth-guard';
 import { NavBarComponent } from './pages/nav-bar/nav-bar.component';
 
-import { MenuModule, MenuItemContent } from 'primeng/menu';
-import { MenuItem } from 'primeng/api';
+import { MenuModule } from 'primeng/menu';
 
 @NgModule({
   declarations: [
@@ -41,9 +40,7 @@ import { MenuItem } from 'primeng/api';
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    HttpClient,
     MenuModule,
-    MenuItemContent,
     RouterModule.forRoot(AppRoutes, { useHash: true, enableTracing: false }),
   ],
   providers: [
