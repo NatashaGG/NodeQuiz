@@ -6,7 +6,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { SigninComponent } from './pages/signin/signin.component';
 import { FourZeroFourComponent } from './pages/four-zero-four/four-zero-four.component';
 import { QuizResultsComponent } from './pages/quiz-results/quiz-results.component';
-
+import { NavBarComponent } from './pages/nav-bar/nav-bar.component';
 
 export const AppRoutes: Routes = [
     {

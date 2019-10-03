@@ -18,6 +18,7 @@ import { QuizResultsComponent } from './pages/quiz-results/quiz-results.componen
 import { AuthLayoutComponent } from './shared/auth-layout/auth-layout.component';
 import { CookieService } from 'ngx-cookie-service';
 import { AuthGuard } from './shared/guards/auth-guard';
+import { NavBarComponent } from './pages/nav-bar/nav-bar.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { AuthGuard } from './shared/guards/auth-guard';
     QuizSelectionComponent,
     QuizPresentationsComponent,
     QuizComponent,
-    QuizResultsComponent
+    QuizResultsComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
