@@ -20,6 +20,8 @@ import { CookieService } from 'ngx-cookie-service';
 import { AuthGuard } from './shared/guards/auth-guard';
 import { NavBarComponent } from './pages/nav-bar/nav-bar.component';
 
+import { MenuModule, MenuItemContent } from 'primeng/menu';
+import { MenuItem } from 'primeng/api';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,8 @@ import { NavBarComponent } from './pages/nav-bar/nav-bar.component';
     BrowserAnimationsModule,
     HttpClientModule,
     HttpClient,
+    MenuModule,
+    MenuItemContent,
     RouterModule.forRoot(AppRoutes, { useHash: true, enableTracing: false }),
   ],
   providers: [
