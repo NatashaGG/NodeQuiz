@@ -5,8 +5,8 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const path = require('path');
 const mongoose = require('mongoose');
-const Employee = require('./db-models/employee');
 const bluebird = require('bluebird');
+const Employee = require('./db-models/employee');
 
 let app = express();
 
@@ -22,7 +22,34 @@ const serverPort = 3000;
 
 /*****************************Mongoose connection strings go below this line ***********************************/
 
+const connString = 'mongodb+srv://nodeQuizAdmin:P@ssw0rd@cluster0-xgrxn.mongodb.net/test?retryWrites=true&w=majority';
+
+mongoose.connect(connString, {promiseLibrary:require('bluebird'), useNewUrlParser: true})
+        .then(() => console.debug('Connection to MongoDB NodeQuiz was successful.'))
+        .catch((err) => console.debug('MongoDB Error: ' + err.message));
+
+
 /*************************** API routes go below this line *********************************/
+
+
+// Employee stuff
+app.post('/api/employees', function(req, res, next) {
+  const employee = {
+    employeeId: req.body.employeeId,
+    givenname: req.body.givenname,
+    surname: req.body.surname
+  };
+
+  Employee.create(employee, function(err, employees) {
+    if (err) {
+      console.log(err);
+      return next(err);
+    } else {
+      console.log(employees);
+      res.json(employees);
+    }
+  });
+});
 
 app.get('/api/employees/:id', function(req, res, next) {
   Employee.findOne({'employeeId': req.params.id}, function(err, employee) {
