@@ -16,6 +16,10 @@ export const AppRoutes: Routes = [
             {
                 path: '',
                 component: SigninComponent
+            },
+            {
+                path: '',
+                component: HomeComponent
             }
         ]
     },
@@ -46,6 +50,10 @@ export const AppRoutes: Routes = [
             {
                 path: 'four-zero-four',
                 component: FourZeroFourComponent
+            },
+            {
+                path: 'home',
+                component: HomeComponent
             }
         ]
     },
