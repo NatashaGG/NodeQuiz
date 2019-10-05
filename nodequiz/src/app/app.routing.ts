@@ -7,6 +7,7 @@ import { SigninComponent } from './pages/signin/signin.component';
 import { FourZeroFourComponent } from './pages/four-zero-four/four-zero-four.component';
 import { QuizResultsComponent } from './pages/quiz-results/quiz-results.component';
 import { NavBarComponent } from './pages/nav-bar/nav-bar.component';
+import { QuizSelectionComponent } from './pages/quiz-selection/quiz-selection.component';
 
 export const AppRoutes: Routes = [
     {
@@ -16,20 +17,21 @@ export const AppRoutes: Routes = [
             {
                 path: '',
                 component: SigninComponent,
-            },
-            {
-                path: '',
-                component: HomeComponent
             }
         ]
     },
     {
         path: 'home',
-        component: HomeComponent,
+        component: BaseLayoutComponent,
         children: [
             {
                 path: '',
                 component: HomeComponent,
+                canActivate: [AuthGuard]
+            },
+            {
+                path: 'quiz-selection',
+                component: QuizSelectionComponent,
                 canActivate: [AuthGuard]
             },
             {
@@ -50,10 +52,6 @@ export const AppRoutes: Routes = [
             {
                 path: 'four-zero-four',
                 component: FourZeroFourComponent
-            },
-            {
-                path: 'home',
-                component: HomeComponent
             }
         ]
     },
