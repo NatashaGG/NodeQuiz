@@ -15,7 +15,7 @@ export const AppRoutes: Routes = [
         children: [
             {
                 path: '',
-                component: SigninComponent
+                component: SigninComponent,
             },
             {
                 path: '',
