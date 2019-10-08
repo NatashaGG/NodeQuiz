@@ -21,6 +21,8 @@ import { AuthGuard } from './shared/guards/auth-guard';
 import { NavBarComponent } from './pages/nav-bar/nav-bar.component';
 
 import { MenuModule } from 'primeng/menu';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,8 @@ import { MenuModule } from 'primeng/menu';
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    MatFormFieldModule,
+    MatToolbarModule,
     MenuModule,
     RouterModule.forRoot(AppRoutes, { useHash: true, enableTracing: false }),
   ],
