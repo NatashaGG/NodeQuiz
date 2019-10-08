@@ -1,3 +1,12 @@
+/*
+=====================================
+  ; Title: signin.component.ts
+  ; Author: Natasha Whitmer
+  ; Updated Date: October 7 2019
+  ; Description: signin.component.ts
+======================================
+*/
+
 import { Component, OnInit} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 

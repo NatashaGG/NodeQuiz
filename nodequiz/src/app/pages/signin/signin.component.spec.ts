@@ -1,5 +1,12 @@
+/*
+=====================================
+  ; Title: signin.component.spec.ts
+  ; Author: Natasha Whitmer
+  ; Updated Date: October 7 2019
+  ; Description: signin.component.spec.ts
+======================================
+*/
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { SigninComponent } from './signin.component';
 
 describe('SigninComponent', () => {
