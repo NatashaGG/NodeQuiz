@@ -19,10 +19,14 @@ import { AuthLayoutComponent } from './shared/auth-layout/auth-layout.component'
 import { CookieService } from 'ngx-cookie-service';
 import { AuthGuard } from './shared/guards/auth-guard';
 import { NavBarComponent } from './pages/nav-bar/nav-bar.component';
-
+import { FormsModule } from '@angular/forms';
 import { MenuModule } from 'primeng/menu';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+
 
 @NgModule({
   declarations: [
@@ -41,8 +45,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    FormsModule,
     HttpClientModule,
+    MatCardModule,
+    MatButtonModule,
     MatFormFieldModule,
+    MatInputModule, 
     MatToolbarModule,
     MenuModule,
     RouterModule.forRoot(AppRoutes, { useHash: true, enableTracing: false }),
