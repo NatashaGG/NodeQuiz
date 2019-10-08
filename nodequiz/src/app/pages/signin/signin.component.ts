@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { Component, OnInit} from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-signin',
@@ -7,8 +7,11 @@ import {MatFormFieldModule} from '@angular/material/form-field';
   styleUrls: ['./signin.component.css']
 })
 export class SigninComponent implements OnInit {
+  userId: string;
 
-  constructor() { }
+  constructor(route: ActivatedRoute) {
+    this.userId = route.snapshot.paramMap.get('employeeId');
+  }
 
   ngOnInit() {
   }
