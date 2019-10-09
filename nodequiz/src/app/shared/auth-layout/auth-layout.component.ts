@@ -1,3 +1,11 @@
+/*
+=====================================
+  ; Title: auth-layout.component.ts
+  ; Author: Natasha Whitmer
+  ; Date: October 9 2019
+  ; Description: auth-layout.component.ts
+======================================
+*/
 import { Component, OnInit } from '@angular/core';
 
 @Component({

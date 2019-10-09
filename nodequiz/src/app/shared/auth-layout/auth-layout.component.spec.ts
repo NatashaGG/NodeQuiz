@@ -1,3 +1,11 @@
+/*
+=====================================
+  ; Title: auth-layout.component.spec.ts
+  ; Author: Natasha Whitmer
+  ; Date: October 9 2019
+  ; Description: auth-layout.component.spec.ts
+======================================
+*/
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AuthLayoutComponent } from './auth-layout.component';

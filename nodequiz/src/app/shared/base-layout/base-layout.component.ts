@@ -1,3 +1,11 @@
+/*
+=====================================
+  ; Title: base-layout.component.ts
+  ; Author: Natasha Whitmer
+  ; Date: October 9 2019
+  ; Description: base-layout.component.ts
+======================================
+*/
 import { Component, OnInit } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
 import { Router } from '@angular/router';
@@ -18,7 +26,7 @@ export class BaseLayoutComponent implements OnInit {
   logout(){
     console.log("Logout");
     this.cookieService.delete('isAuthenticated');
-    this.router.navigate(['/session/login']);
+    this.router.navigate(['/session/signin']);
   }
 
 }
