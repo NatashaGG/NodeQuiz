@@ -16,7 +16,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { BaseLayoutComponent } from './shared';
-import { HomeComponent } from './pages/home/home.component';
 import { SigninComponent } from './pages/signin/signin.component';
 import { FourZeroFourComponent } from './pages/four-zero-four/four-zero-four.component';
 import { QuizSelectionComponent } from './pages/quiz-selection/quiz-selection.component';
@@ -40,7 +39,6 @@ import { MatInputModule } from '@angular/material/input';
   declarations: [
     AppComponent,
     BaseLayoutComponent,
-    HomeComponent,
     FourZeroFourComponent,
     AuthLayoutComponent,
     SigninComponent,
