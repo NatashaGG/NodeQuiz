@@ -34,25 +34,25 @@ mongoose.connect(connString, {promiseLibrary:require('bluebird'), useNewUrlParse
 
 
 // Employee stuff
-app.post('/api/employees', function(req, res, next) {
+app.post('/api/employeeIds', function(req, res, next) {
   const employee = {
     employeeId: req.body.employeeId,
-    givenname: req.body.givenname,
+    given_name: req.body.givenname,
     surname: req.body.surname
   };
 
-  Employee.create(employee, function(err, employees) {
+  Employee.create(employee, function(err, employeeIds) {
     if (err) {
       console.log(err);
       return next(err);
     } else {
-      console.log(employees);
-      res.json(employees);
+      console.log(employeeIds);
+      res.json(employeeIds);
     }
   });
 });
 
-app.get('/api/employees/:id', function(req, res, next) {
+app.get('/api/employeeIds/:id', function(req, res, next) {
   Employee.findOne({'employeeId': req.params.id}, function(err, employee) {
     if (err) {
       console.log(err);

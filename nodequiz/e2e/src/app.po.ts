@@ -1,3 +1,11 @@
+/*
+=====================================
+  ; Title: app.po.ts
+  ; Author: Natasha Whitmer
+  ; Date: October 9 2019
+  ; Description: app.po.ts
+======================================
+*/
 import { browser, by, element } from 'protractor';
 
 export class AppPage {

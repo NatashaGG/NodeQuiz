@@ -10,8 +10,8 @@ const mongoose = require('mongoose');
 
 let employeeSchema = mongoose.Schema({
   employeeId: String,
-  firstName: String,
-  lastName: String
+  given_name: String,
+  surname: String
 });
 
 module.exports = mongoose.model('Employee', employeeSchema);
