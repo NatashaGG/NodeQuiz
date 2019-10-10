@@ -1,4 +1,11 @@
-import 'hammerjs';
+/*
+=====================================
+  ; Title: main.ts
+  ; Author: Natasha Whitmer
+  ; Date: October 9 2019
+  ; Description: main.ts
+======================================
+*/
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 

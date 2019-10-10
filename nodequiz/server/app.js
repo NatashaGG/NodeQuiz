@@ -7,6 +7,7 @@ const path = require('path');
 const mongoose = require('mongoose');
 const bluebird = require('bluebird');
 const Employee = require('./db-models/employee');
+const Quiz = require('./db-models/quiz'); 
 
 let app = express();
 
