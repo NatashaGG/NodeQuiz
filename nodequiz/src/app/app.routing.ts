@@ -6,7 +6,7 @@
   ; Description: app.routing.ts
 ======================================
 */
-import { Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 import { BaseLayoutComponent } from './shared';
 import { AuthLayoutComponent } from './shared/auth-layout/auth-layout.component';
 import { AuthGuard } from './shared/guards/auth-guard';
@@ -16,36 +16,16 @@ import { QuizComponent } from './pages/quiz/quiz.component';
 import { QuizResultsComponent } from './pages/quiz-results/quiz-results.component';
 import { QuizSelectionComponent } from './pages/quiz-selection/quiz-selection.component';
 import { QuizPresentationsComponent } from './pages/quiz-presentations/quiz-presentations.component';
+import { NgModule } from '@angular/core';
 
 export const AppRoutes: Routes = [
-    {
-        path: '',
-        component: AuthLayoutComponent,
-        children: [
-            {
-                path: '',
-                component: SigninComponent,
-            }
-        ]
-    },
-    {
-        path: 'quiz-selection',
-        component: BaseLayoutComponent,
-        children: [
-            {
-                path: 'quiz-selection',
-                component: QuizSelectionComponent,
-                canActivate: [AuthGuard]
-            }
-        ]
-    },
     {
         path: 'session',
         component: AuthLayoutComponent,
         children: [
             {
                 path: 'signin',
-                component: SigninComponent
+                component: SigninComponent,
             },
             {
                 path: 'four-zero-four',
@@ -54,7 +34,24 @@ export const AppRoutes: Routes = [
         ]
     },
     {
+        path: '',
+        component: BaseLayoutComponent,
+        children: [
+            {
+                path: '',
+                component: QuizSelectionComponent,
+                canActivate: [AuthGuard]
+            }
+        ]
+    },
+    {
         path: '**',
         redirectTo: 'session/four-zero-four'
     }
 ];
+
+@NgModule({
+    imports: [RouterModule.forRoot(AppRoutes)],
+    exports: [RouterModule]
+})
+export class AppRoutingModule {}

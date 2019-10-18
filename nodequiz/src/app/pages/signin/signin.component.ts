@@ -33,10 +33,10 @@ export class SigninComponent implements OnInit {
   submit() {
     const employeeId = this.form.controls['employeeId'].value;
 
-    this.http.get('/api/employeeIds/' + employeeId).subscribe(res => {
+    this.http.get('/api/employees/' + employeeId).subscribe(res => {
       if (res) {
-        this.cookie.set('isAuthenticated', 'true', 1);
-        this.cookie.set('employeeId', employeeId, 1);
+        this.cookie.set('isAuthenticated', 'true', 7);
+        this.cookie.set('employeeId', employeeId, 7);
         this.router.navigate(['/quiz-selection']);
       } else {
         this.errorMessage = "Please try again";
