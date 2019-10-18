@@ -46,8 +46,8 @@ app.post('/api/employees', function(req, res, next) {
       console.log(err);
       return next(err);
     } else {
-      console.log(employeeIds);
-      res.json(employeeIds);
+      console.log(employees);
+      res.json(employees);
     }
   });
 });
