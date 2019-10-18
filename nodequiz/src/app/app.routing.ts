@@ -33,7 +33,7 @@ export const AppRoutes: Routes = [
         component: BaseLayoutComponent,
         children: [
             {
-                path: '',
+                path: 'quiz-selection',
                 component: QuizSelectionComponent,
                 canActivate: [AuthGuard]
             }

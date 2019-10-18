@@ -23,7 +23,7 @@ const serverPort = 3000;
 
 /*****************************Mongoose connection strings go below this line ***********************************/
 
-const connString = 'mongodb+srv://nodeQuizAdmin:P@ssw0rd@cluster0-xgrxn.mongodb.net/test?retryWrites=true&w=majority';
+const connString = 'mongodb+srv://nodeQuizAdmin:Passw0rd@cluster0-xgrxn.mongodb.net/test?retryWrites=true&w=majority';
 
 mongoose.connect(connString, {promiseLibrary:require('bluebird'), useNewUrlParser: true})
         .then(() => console.debug('Connection to MongoDB NodeQuiz was successful.'))

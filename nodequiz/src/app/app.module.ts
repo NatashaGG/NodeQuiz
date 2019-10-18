@@ -8,6 +8,7 @@
 */
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule} from '@angular/router';
 import { AppRoutes } from './app.routing';
@@ -26,14 +27,14 @@ import { AuthLayoutComponent } from './shared/auth-layout/auth-layout.component'
 import { CookieService } from 'ngx-cookie-service';
 import { AuthGuard } from './shared/guards/auth-guard';
 import { NavBarComponent } from './pages/nav-bar/nav-bar.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MenuModule } from 'primeng/menu';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
-
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -51,15 +52,18 @@ import { MatInputModule } from '@angular/material/input';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    CommonModule,
     FormsModule,
     HttpClientModule,
     MatCardModule,
     MatButtonModule,
+    MatDividerModule,
     MatFormFieldModule,
     MatInputModule, 
     MatToolbarModule,
     MenuModule,
     RouterModule.forRoot(AppRoutes, { useHash: true, enableTracing: false }),
+    ReactiveFormsModule,
   ],
   providers: [
     {provide: LocationStrategy, useClass: HashLocationStrategy},

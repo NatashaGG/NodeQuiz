@@ -1,18 +1,31 @@
+<!--
+=====================================
+  ; Title: signin.component.html
+  ; Author: Natasha Whitmer
+  ; Date: October 12 2019
+  ; Description: signin.component.html
+======================================
+-->
+
 <div class="signin-form">
     <mat-card class="signin-panel">
         <mat-card-title>Please enter Employee Id below!</mat-card-title>
             
         <mat-card-content>
-            <mat-card>
+            <small *ngIf="errorMessage">{{ errorMessage }}</small>
+            <form #signinForm="ngForm" (ngSubmit)="submit(); form.reset();">
                 <mat-card-content>
+                    <small *ngIf="form.controls['employeeId'].hasError('required') && form.controls['employeeId'].touched">An Employee Id is required.</small>
+                    <small *ngIf="form.controls['employeeId'].hasError('pattern') && form.controls['employeeId'].touched">Please try again.</small>
                     <mat-form-field>
-                        <input type="text" matInput placeholder="8675309">
+                        <input type="text" matInput [formControl]="form.controls['employeeId']" placeholder="1337">
                     </mat-form-field>
                 </mat-card-content>
-                    <mat-card-actions>
-                        <button routerLink = "/home" mat-raised-button>Sign In</button>
-                    </mat-card-actions>
-            </mat-card>
+                
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" [disabled]="!form.valid" type="submit">Sign In</button>
+                </mat-card-actions>
+            </form>
         </mat-card-content>
     </mat-card>
 </div>
