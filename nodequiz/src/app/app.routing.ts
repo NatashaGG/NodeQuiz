@@ -20,27 +20,37 @@ import { NgModule } from '@angular/core';
 
 export const AppRoutes: Routes = [
     {
-        path: 'session',
+        path: '',
         component: AuthLayoutComponent,
         children: [
             {
-                path: 'signin',
+                path: '',
                 component: SigninComponent,
-            },
-            {
-                path: 'four-zero-four',
-                component: FourZeroFourComponent
             }
         ]
     },
     {
-        path: '',
+        path: 'quiz-selection',
         component: BaseLayoutComponent,
         children: [
             {
                 path: '',
                 component: QuizSelectionComponent,
                 canActivate: [AuthGuard]
+            }
+        ]
+    },
+    {
+        path: 'session',
+        component: AuthLayoutComponent,
+        children: [
+            {
+                path: 'signin',
+                component: SigninComponent
+            },
+            {
+                path: 'four-zero-four',
+                component: FourZeroFourComponent
             }
         ]
     },
