@@ -1,3 +1,12 @@
+/*
+=====================================
+  ; Title: app.js
+  ; Author: Natasha Whitmer
+  ; Date: October 9 2019
+  ; Description: app.js
+======================================
+*/
+
 // const for all imports
 const express = require('express');
 const http = require('http');

@@ -1,3 +1,12 @@
+/*
+=====================================
+  ; Title: nav-bar.component.spec.ts
+  ; Author: Natasha Whitmer
+  ; Updated Date: October 7 2019
+  ; Description: nav-bar.component.spec.ts
+======================================
+*/
+
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NavBarComponent } from './nav-bar.component';

@@ -1,3 +1,12 @@
+/*
+=====================================
+  ; Title: quiz-presentations.component.spec.ts
+  ; Author: Natasha Whitmer
+  ; Updated Date: October 7 2019
+  ; Description: quiz-presentations.component.spec.ts
+======================================
+*/
+
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { QuizPresentationsComponent } from './quiz-presentations.component';

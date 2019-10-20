@@ -1,3 +1,12 @@
+/*
+=====================================
+  ; Title: four-zero-four.component.spec.ts
+  ; Author: Natasha Whitmer
+  ; Updated Date: October 7 2019
+  ; Description: four-zero-four.component.spec.ts
+======================================
+*/
+
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FourZeroFourComponent } from './four-zero-four.component';

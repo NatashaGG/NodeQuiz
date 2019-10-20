@@ -1,3 +1,12 @@
+/*
+=====================================
+  ; Title: nav-bar.component.ts
+  ; Author: Natasha Whitmer
+  ; Updated Date: October 7 2019
+  ; Description: nav-bar.component.ts
+======================================
+*/
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({

@@ -1,3 +1,12 @@
+/*
+=====================================
+  ; Title: quiz-results.component.spec.ts
+  ; Author: Natasha Whitmer
+  ; Updated Date: October 7 2019
+  ; Description: quiz-results.component.spec.ts
+======================================
+*/
+
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { QuizResultsComponent } from './quiz-results.component';

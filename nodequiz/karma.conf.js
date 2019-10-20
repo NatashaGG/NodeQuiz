@@ -1,3 +1,12 @@
+/*
+=====================================
+  ; Title: karma.conf.js
+  ; Author: Natasha Whitmer
+  ; Updated Date: October 7 2019
+  ; Description: karma.conf.js
+======================================
+*/
+
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/1.0/config/configuration-file.html
 
