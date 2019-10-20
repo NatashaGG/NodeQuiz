@@ -33,8 +33,8 @@ export class QuizSelectionComponent implements OnInit {
   })
   }
 
-  presentationPage(id) {
-    this.router.navigateByUrl('/dashboard/presentation/' + id);
+  goToPresentationPage(id) {
+    this.router.navigateByUrl('/quiz-selection/quiz-presentations/' + id);
   }
-
+ 
 }

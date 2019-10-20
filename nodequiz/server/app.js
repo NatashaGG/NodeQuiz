@@ -74,7 +74,7 @@ app.get('/api/employees/:id', function(req, res, next) {
 });
 
 // QUIZ STUFF
-app.post('/api/quizzes', function(req, res, next) {
+app.post('/api/quizzes/', function(req, res, next) {
   const quiz = {
     quizId: req.body.employeeId,
     quizName: req.body.quizName,

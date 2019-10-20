@@ -1,0 +1,17 @@
+html {
+    width: 100%;
+    background-color: darkgray;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 33.33%;
+    padding: 5px;
+}
+.quiz-header-image {
+    background-image: url('../../../assets/images/quizicon.jpg');
+    background-size: cover;
+}

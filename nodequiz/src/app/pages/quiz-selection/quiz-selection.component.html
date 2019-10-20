@@ -6,17 +6,56 @@
   ; Description: quiz-selection.component.html
 ======================================
 -->
-<h2>Please selection your quiz below!</h2>
-<small *ngIf="errorMessage">{{ errorMessage }}</small>
-<div *ngIf="quizzes">
-    <div fxLayout="column" fxLayoutAlign="center" *ngFor="let quiz of quizzes">
-        <mat-card>
-            <mat-card-title>{{ quiz.quizName }}</mat-card-title>
-            <mat-card-content>
-                <img mat-card-image src="/nodequiz/src/assets/presentations/{{ quiz.quizId }}/{{ quiz.presentations[0].imagePath }}">
-                <p>{{ quiz.quizDescription }}</p>
-                <button fxFlex mat-raised-button color="primary" (click)="goToPresentation(quiz.quizId)">View Presentation</button>
-            </mat-card-content>
-        </mat-card>
+<div class="quizselect">
+    <h2>Please select your quiz below!</h2>
+    <div class="row">
+        <div class="column">
+            <mat-card>
+                <mat-card-header>
+                    <div mat-card-avatar class="quiz-header-image"></div>
+                    <mat-card-title>RESTful APIs</mat-card-title>
+                    <mat-card-subtitle>Quiz 1</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="../../../assets/presentations/1001/1.JPG" alt="photo of slide 1" style="width:100%">
+                <mat-card-content>
+                    <p>This quiz is in regards to RESTful APIs.</p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" (click)="goToPresentationPage(1001)">View Presentation</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+        <div class="column">
+            <mat-card>
+                <mat-card-header>
+                    <div mat-card-avatar class="quiz-header-image"></div>
+                    <mat-card-title>Development Operations</mat-card-title>
+                    <mat-card-subtitle>Quiz 2</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="../../../assets/presentations/1002/1.JPG" alt="photo of slide 1" style="width:100%; align-content: center">
+                <mat-card-content>
+                    <p>This quiz is in regards to Development Operations.</p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" (click)="goToPresentationPage(1002)">View Presentation</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+        <div class="column">
+            <mat-card>
+                <mat-card-header>
+                    <div mat-card-avatar class="quiz-header-image"></div>
+                    <mat-card-title>HTML, CSS, and JS</mat-card-title>
+                    <mat-card-subtitle>Quiz 3</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="../../../assets/presentations/1003/1.JPG" alt="photo of slide 1" style="width:100%">
+                <mat-card-content>
+                    <p>This quiz is in regards to HTML, CSS, & JavaScript.</p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" (click)="goToPresentationPage(1003)">View Presentation</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
     </div>
 </div>
