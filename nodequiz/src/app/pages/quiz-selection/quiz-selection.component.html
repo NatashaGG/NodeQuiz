@@ -6,22 +6,17 @@
   ; Description: quiz-selection.component.html
 ======================================
 -->
-
+<h2>Please selection your quiz below!</h2>
 <small *ngIf="errorMessage">{{ errorMessage }}</small>
-<div *ngIf="quizselection">
+<div *ngIf="quizzes">
     <div fxLayout="column" fxLayoutAlign="center" *ngFor="let quiz of quizzes">
-        <mat-card class="quizcards">
-            <mat-card-header>
-                <div mat-card-avatar class="quiz-header-image"></div>
-                <mat-card-title>{{ quiz.quizName }}</mat-card-title>
-            </mat-card-header>
-            <img mat-card-image src="assets/images/(( quiz.quizId }}/{{ quiz.presentation[0].imagePath }}">
+        <mat-card>
+            <mat-card-title>{{ quiz.quizName }}</mat-card-title>
             <mat-card-content>
+                <img mat-card-image src="/nodequiz/src/assets/presentations/{{ quiz.quizId }}/{{ quiz.presentations[0].imagePath }}">
                 <p>{{ quiz.quizDescription }}</p>
-            </mat-card-content>
-            <mat-card-actions>
                 <button fxFlex mat-raised-button color="primary" (click)="goToPresentation(quiz.quizId)">View Presentation</button>
-            </mat-card-actions>
+            </mat-card-content>
         </mat-card>
     </div>
 </div>
