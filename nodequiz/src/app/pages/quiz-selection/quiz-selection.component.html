@@ -1,1 +1,27 @@
-<h1>It works</h1>
+<!--
+=====================================
+  ; Title: quiz-selection.component.html
+  ; Author: Natasha Whitmer
+  ; Date: October 20 2019
+  ; Description: quiz-selection.component.html
+======================================
+-->
+
+<small *ngIf="errorMessage">{{ errorMessage }}</small>
+<div *ngIf="quizselection">
+    <div fxLayout="column" fxLayoutAlign="center" *ngFor="let quiz of quizzes">
+        <mat-card class="quizcards">
+            <mat-card-header>
+                <div mat-card-avatar class="quiz-header-image"></div>
+                <mat-card-title>{{ quiz.quizName }}</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src="assets/images/(( quiz.quizId }}/{{ quiz.presentation[0].imagePath }}">
+            <mat-card-content>
+                <p>{{ quiz.quizDescription }}</p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button fxFlex mat-raised-button color="primary" (click)="goToPresentation(quiz.quizId)">View Presentation</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>
