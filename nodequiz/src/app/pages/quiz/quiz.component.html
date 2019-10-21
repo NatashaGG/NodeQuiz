@@ -1,1 +1,40 @@
-<h1>IT WORKS HERE TOO FOR QUIZ</h1>
+<!--
+=====================================
+  ; Title: quiz.component.html
+  ; Author: Natasha Whitmer
+  ; Date: October 20 2019
+  ; Description: quiz.component.html
+======================================
+-->
+<!-- <div>
+    <mat-card>
+        <mat-card-title>{{quiz.quizName}}</mat-card-title>
+        <mat-card-content>
+            <form #quizForm="ngForm" (ngSubmit)="onSubmit(quizForm.value);">
+                <mat-card>
+                    <mat-card-content fxLayout="column" fxLayoutGap="10px">
+                        <small *ngIf="errorMessage">{{errorMessage}}</small>
+
+                        <ol>
+                            <li *ngFor="let question of quiz.questions">
+                                {{question.question}}
+                            
+                                <div *ngFor="let answers of question.answers">
+                                    <input class=""
+                                    [(ngModel)]="qs[question.questionId]"
+                                    [checked]="qs[question.questionId]"
+                                    value="{{question.question}};{{answers}};{{{question.answers}}"
+                                    name="q{{question.questionId}}" tyel="radio" />{{answers}}
+                                </div>
+                            </li>
+                        </ol>
+                    </mat-card-content>
+                    
+                    <mat-card-actions>
+                        <button fxFlex mat-raised-button color="primary" type="submit">Submit</button>
+                    </mat-card-actions>
+                </mat-card> 
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>  -->
