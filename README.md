@@ -1,6 +1,13 @@
 # Nodequiz
 
+Mastering the MEAN Stack Bootcamp - Web 450
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.2.
+
+## Contributors
+
+Professor Krasso  - Bellevue University
+Natasha L Whitmer - Bellevue University
 
 ## Development server
 
