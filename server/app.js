@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname, '../dist/nodequiz')));
 app.use('/', express.static(path.join(__dirname, '../dist/nodequiz')));
 
 // Global variables
-const serverPort = prorcess.env.PORT || 3000;
+const serverPort = process.env.PORT || 3000;
 
 /*****************************Mongoose connection strings go below this line ***********************************/
 
